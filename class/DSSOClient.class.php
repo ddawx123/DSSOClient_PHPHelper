@@ -80,7 +80,7 @@ class DSSOClient {
                 'reqtime'   =>  time()
             );
         }
-        $retString = $this->wehAccessRequest($this->_IDPInfo['SCHEME'].'://'.$this->_IDPInfo['HOST'].':'.$this->_IDPInfo['PORT'].'/api', $body);
+        $retString = $this->webAccessRequest($this->_IDPInfo['SCHEME'].'://'.$this->_IDPInfo['HOST'].':'.$this->_IDPInfo['PORT'].'/api', $body);
         if ($format == 'json') {
             $data = json_decode($retString, true);
             switch ($data['code']) {
@@ -105,7 +105,7 @@ class DSSOClient {
      * @param array $param 传送数据体
      * @return string
      */
-    private function wehAccessRequest($url, $param) {
+    private function webAccessRequest($url, $param) {
         $param = json_encode($param);
         $ch = curl_init();
         curl_setopt_array($ch, array(
