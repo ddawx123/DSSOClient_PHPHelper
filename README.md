@@ -62,7 +62,7 @@ Array
 
 **Error number guide**
 ```java
-201：Security policy limited, need change password first. (User Problem)
+201: Security policy limited, need change password first. (User Problem)
 400: Client configuration check failed. (Application Problem)
 401: Can not entry current application. (User Problem)
 403: Token expired. (Not explicitly)
